@@ -15,20 +15,20 @@ is_play = False
 # 플레이어
 player.shape('turtle')
 player.color('blue')
-player.speed(3)
+player.speed(5)
 player.up()
 
 # 적 거북이
 enemy.shape('turtle')
 enemy.color('red')
 enemy.up()
-enemy.speed(3)
+enemy.speed(5)
 
 # 심판 거북이
 judgment.shape('turtle')
 judgment.color('black')
 judgment.pensize(10)
-judgment.speed(3)
+judgment.speed(5)
 
 # t(Default): for print message
 t.speed(0)
@@ -71,12 +71,12 @@ def start():
 
     while is_play:
         enemy.forward(1)
-        isGoal = goal_in()
-        if isGoal:
-            who_is_winner(str(isGoal))
+        is_goal = goal_in()
+        if is_goal:
+            who_is_winner(str(is_goal))
             is_play = False
             init()
-        
+
 # 심판 거북이가 누가 이겼는지 직접 말해주는 함수
 def who_is_winner(winner):
     judgment_position = judgment.position()
